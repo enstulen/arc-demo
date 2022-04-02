@@ -4,12 +4,14 @@
   "license": "UNLICENSED",
   "description": "A demo for Webstep",
   "scripts": {
-    "start": "npx sandbox",
+    "start": "concurrently \"npx sandbox\" \"npx wait-on http-get://localhost:3333/ && node scripts/populate-dynamodb\"",
     "deploy": "arc deploy",
     "deploy:static": "arc deploy static"
   },
   "dependencies": {
-    "@architect/plugin-typescript": "^0.1.0"
+    "@architect/functions": "^5.0.4",
+    "@architect/plugin-typescript": "^0.1.0",
+    "wait-on": "^6.0.1"
   },
   "devDependencies": {
     "@architect/architect": "^10.2.1",
@@ -18,9 +20,7 @@
     "@types/aws-lambda": "^8.10.93",
     "@types/node": "^17.0.23",
     "eslint": "^8.12.0",
-    "prettier": "^2.6.1"
-  },
-  "eslintConfig": {
-    "extends": "@architect/eslint-config"
+    "prettier": "^2.6.1",
+    "concurrently": "^7.1.0"
   }
 }

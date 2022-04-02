@@ -9,7 +9,7 @@ const VehicleCardContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 20px;
+  gap: 50px;
 `;
 
 const Home = (props: HomeProps) => {

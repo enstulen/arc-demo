@@ -13,4 +13,16 @@ const createJSONResponse = (body: object) => {
   };
 };
 
-export { createJSONResponse };
+const createEmptyResponse = (statusCode: number) => {
+  return {
+    statusCode,
+  };
+};
+const createErrorResponse = (message: string) => {
+  return {
+    statusCode: 500,
+    body: message,
+  };
+};
+
+export { createEmptyResponse, createJSONResponse, createErrorResponse };

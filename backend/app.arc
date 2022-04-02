@@ -16,11 +16,20 @@ architect/plugin-typescript
 
 @http
 get /
-get /vehicles
 get /vehicles/:regnumber/toll-passages
+get /vehicles
+
+post /toll-passages
+
+@queues
+add-toll-passage
+
+@tables
+tollPassages
+  regnumber *String
+  date **String
 
 @static
 folder ../frontend/build
 fingerprint true
-
 

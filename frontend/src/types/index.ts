@@ -5,3 +5,9 @@ export interface Vehicle {
   description: string;
   regnumber: string;
 }
+
+export interface TollPassage {
+  date: string;
+  regnumber: string;
+  location: string;
+}

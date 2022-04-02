@@ -14,11 +14,33 @@ const VehicleCardImage = styled.img`
 `;
 
 const Card = styled(BaseCard)`
-  width: 300px;
+  width: 350px;
 `;
 
-const TextContainer = styled.div`
+const ContentContainer = styled.div`
   padding: 20px;
+  text-decoration: none;
+  color: black;
+`;
+
+const Button = styled.button`
+  background-color: #ff4a7e;
+  color: white;
+  font-weight: bold;
+  padding: 20px 40px 20px 40px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Subtitle = styled.p`
+  color: #8c8c8c;
 `;
 
 const VehicleCard = (props: Props) => {
@@ -27,10 +49,13 @@ const VehicleCard = (props: Props) => {
     <Link to={`/toll-passages/${vehicle.regnumber}`}>
       <Card>
         <VehicleCardImage src={vehicle.imageUrl} alt="vehicle" />
-        <TextContainer>
+        <ContentContainer>
           <h1>{vehicle.name}</h1>
-          <p>{vehicle.description}</p>
-        </TextContainer>
+          <Subtitle>{vehicle.description}</Subtitle>
+          <ButtonContainer>
+            <Button>Se bompasseringer</Button>
+          </ButtonContainer>
+        </ContentContainer>
       </Card>
     </Link>
   );
