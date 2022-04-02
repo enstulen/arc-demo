@@ -6,7 +6,7 @@ autocreate true
 
 @aws
 profile webstep
-region us-west-1
+region eu-west-1
 architecture arm64
 runtime typescript 
 
@@ -18,5 +18,9 @@ architect/plugin-typescript
 get /
 get /vehicles
 get /vehicles/:regnumber/toll-passages
+
+@static
+folder ../frontend/build
+fingerprint true
 
 

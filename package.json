@@ -4,21 +4,15 @@
   "license": "UNLICENSED",
   "description": "A demo for Webstep",
   "scripts": {
-    "start": "npx sandbox"
-  },
-  "dependencies": {
-    "@architect/plugin-typescript": "^0.1.0"
+    "start:backend": "cd backend && yarn start",
+    "start:frontend": "cd frontend && yarn start",
+    "deploy:frontend": "cd frontend && yarn build && cd ../backend && yarn deploy static",
+    "start": "concurrently \"yarn start:frontend\" \"yarn start:backend\" ",
+    "deploy": "arc deploy"
   },
   "devDependencies": {
-    "@architect/architect": "^10.2.1",
-    "@architect/eslint-config": "^2.0.1",
-    "@types/architect__functions": "^3.13.6",
-    "@types/aws-lambda": "^8.10.93",
-    "@types/node": "^17.0.23",
+    "concurrently": "^7.1.0",
     "eslint": "^8.12.0",
     "prettier": "^2.6.1"
-  },
-  "eslintConfig": {
-    "extends": "@architect/eslint-config"
   }
 }
