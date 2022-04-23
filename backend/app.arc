@@ -8,7 +8,6 @@ autocreate true
 profile webstep
 region eu-west-1
 architecture arm64
-runtime typescript 
 
 @plugins
 architect/plugin-typescript
