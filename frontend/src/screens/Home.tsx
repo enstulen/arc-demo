@@ -10,6 +10,13 @@ const VehicleCardContainer = styled.div`
   flex-direction: row;
   width: 100%;
   gap: 50px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
+const Container = styled.div`
+  padding: 40px;
 `;
 
 const Home = (props: HomeProps) => {
@@ -26,7 +33,7 @@ const Home = (props: HomeProps) => {
   }, []);
 
   return (
-    <>
+    <Container>
       <h1>Biler</h1>
       <VehicleCardContainer>
         {vehicles.map((vehicle) => {
@@ -38,7 +45,7 @@ const Home = (props: HomeProps) => {
           );
         })}
       </VehicleCardContainer>
-    </>
+    </Container>
   );
 };
 

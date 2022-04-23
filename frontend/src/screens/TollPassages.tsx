@@ -6,13 +6,18 @@ import { DateTime } from "luxon";
 import Loader from "../components/Loader";
 import TollPassageCard from "../components/TollPassageCard";
 import styled from "styled-components";
+import BackButton from "../components/BackButton";
 
 interface GroupedTollPassage {
   [key: string]: TollPassage[];
 }
 
+const TollPassageContainer = styled.div`
+  margin-top: 50px;
+`;
+
 const Container = styled.div`
-  margin-top: 60px;
+  padding: 40px;
 `;
 
 const TollPassages = () => {
@@ -49,22 +54,25 @@ const TollPassages = () => {
   );
 
   return (
-    <>
+    <Container>
       {loading ? (
         <Loader />
       ) : (
-        Object.keys(groupedTollPassages).map((date) => {
-          return (
-            <Container>
-              <h2>{date}</h2>
-              <TollPassageCard
-                tollPassages={groupedTollPassages[date]}
-              ></TollPassageCard>
-            </Container>
-          );
-        })
+        <>
+          <BackButton></BackButton>
+          {Object.keys(groupedTollPassages).map((date) => {
+            return (
+              <TollPassageContainer>
+                <h2>{date}</h2>
+                <TollPassageCard
+                  tollPassages={groupedTollPassages[date]}
+                ></TollPassageCard>
+              </TollPassageContainer>
+            );
+          })}
+        </>
       )}
-    </>
+    </Container>
   );
 };
 

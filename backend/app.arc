@@ -12,6 +12,7 @@ runtime typescript
 
 @plugins
 architect/plugin-typescript
+architect/plugin-lambda-invoker
 
 
 @http

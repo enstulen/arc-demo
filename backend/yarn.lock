@@ -159,6 +159,14 @@
   resolved "https://registry.yarnpkg.com/@architect/parser/-/parser-6.0.0.tgz#743cd7c72de2a0eb11c95011fee9ca28e4891901"
   integrity sha512-KqpMvxt8LHd+OMR4jGaDxhgNlcLf38F3h0Kub3aR6DQShsyMG1KGa8A9Bs95LvIV3LzGV6dXly5Oamvi2APmgg==
 
+"@architect/plugin-lambda-invoker@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@architect/plugin-lambda-invoker/-/plugin-lambda-invoker-0.1.1.tgz#73c401239842e304858ee7510143faac8fdbb0da"
+  integrity sha512-hp5J4wp3oRywY7IKKzjWG7cqEQagaV6YflhhKzcxggV7L5CKn0AnTBYU5RMhIQFMBdTiQWNYNn4KYJMBaQMhYg==
+  dependencies:
+    "@architect/utils" "^3.0.4"
+    enquirer "^2.3.6"
+
 "@architect/plugin-typescript@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@architect/plugin-typescript/-/plugin-typescript-0.1.0.tgz#153323cb9b8cd7b2de6a6e699979eeb3a64856ba"
@@ -196,6 +204,19 @@
     tree-kill "~1.2.2"
     update-notifier "~5.1.0"
     ws "~8.5.0"
+
+"@architect/utils@^3.0.4":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@architect/utils/-/utils-3.1.1.tgz#bd0d42b88a4756fa232ffeb006da25fe2b216e43"
+  integrity sha512-Dr1+zuG0EZzqQuv+BhR7NRAIMsGSVB3GuGuR5znLTzJMvFlrsV/LpLlwAjFIa9POVWBpNQodt6Y5p+TpR5FaUA==
+  dependencies:
+    chalk "4.1.2"
+    glob "~7.2.0"
+    path-sort "~0.1.0"
+    restore-cursor "3.1.0"
+    run-series "~1.1.9"
+    run-waterfall "~1.1.7"
+    sha "~3.0.0"
 
 "@architect/utils@~3.1.0":
   version "3.1.0"
@@ -422,6 +443,11 @@ ansi-align@^3.0.0:
   dependencies:
     string-width "^4.1.0"
 
+ansi-colors@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
+  integrity sha512-JoX0apGbHaUJBNl6yF+p6JAFYZ666/hhCGKN5t9QFjbJQKUU/g8MNbFDbvfrgKXvI1QpZplPOnwIo99lX/AAmA==
+
 ansi-regex@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"
@@ -493,6 +519,21 @@ aws-sdk@2.1001.0:
     events "1.1.1"
     ieee754 "1.1.13"
     jmespath "0.15.0"
+    querystring "0.2.0"
+    sax "1.2.1"
+    url "0.10.3"
+    uuid "3.3.2"
+    xml2js "0.4.19"
+
+aws-sdk@^2.1116.0:
+  version "2.1116.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1116.0.tgz#1187ab943e6bf730db282afe7950dd2af409cb5b"
+  integrity sha512-36JFrxPPh/fRQWsgGrZZbzTxRu7dq4KyCKKXPxgVMXylEJsG/KEAVMB1f3eq4PiI5eGxYrpt2OkKoMQZQZLjPA==
+  dependencies:
+    buffer "4.9.2"
+    events "1.1.1"
+    ieee754 "1.1.13"
+    jmespath "0.16.0"
     querystring "0.2.0"
     sax "1.2.1"
     url "0.10.3"
@@ -940,6 +981,13 @@ end-of-stream@^1.1.0:
   integrity sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
   dependencies:
     once "^1.4.0"
+
+enquirer@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/enquirer/-/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
+  integrity sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==
+  dependencies:
+    ansi-colors "^4.1.1"
 
 errno@~0.1.1:
   version "0.1.8"

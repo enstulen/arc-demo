@@ -1,0 +1,13 @@
+{
+  "events": {},
+  "queues": {
+    "add-toll-passage": {
+      "normal-mock": {
+        "date": "2022-04-05T00:00:04",
+        "regnumber": "AB12345",
+        "location": "Finland"
+      }
+    }
+  },
+  "scheduled": {}
+}
