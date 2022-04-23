@@ -4,7 +4,7 @@
   "license": "UNLICENSED",
   "description": "A demo for Webstep",
   "scripts": {
-    "start": "concurrently \"npx sandbox\" \"npx wait-on http-get://localhost:3333/ && node scripts/populate-dynamodb\"",
+    "start": "arc sandbox",
     "deploy": "arc deploy",
     "deploy:static": "arc deploy static"
   },
