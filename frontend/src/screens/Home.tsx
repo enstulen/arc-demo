@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import VehicleCard from "../components/VehicleCard";
 import { Vehicle } from "../types";
+import { apiUrl } from "../utils/url";
 
 type HomeProps = {};
 
@@ -23,7 +24,7 @@ const Home = (props: HomeProps) => {
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
 
   const fetchData = async () => {
-    const response = await fetch("http://localhost:3333/vehicles");
+    const response = await fetch(`${apiUrl()}/vehicles`);
     const vehicles = await response.json();
     setVehicles(vehicles);
   };

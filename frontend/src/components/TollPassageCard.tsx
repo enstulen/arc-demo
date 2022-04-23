@@ -42,7 +42,7 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.h2`
-  color: #8c8c8c;
+  color: #9aa4b0;
   font-size: 12px;
   margin: 5px 0px 0px 0px;
 `;
@@ -52,7 +52,9 @@ const TollPassageCard = ({ tollPassages }: Props) => {
     <Card>
       {tollPassages.map((tollPassage) => {
         return (
-          <Container>
+          <Container
+            key={`${tollPassage.date}-${tollPassage.location}-${tollPassage.regnumber}`}
+          >
             <LeftContainer>
               <TollIcon color="#ff4a7e" />
               <TextContainer>

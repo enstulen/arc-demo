@@ -7,6 +7,7 @@ import Loader from "../components/Loader";
 import TollPassageCard from "../components/TollPassageCard";
 import styled from "styled-components";
 import BackButton from "../components/BackButton";
+import { apiUrl } from "../utils/url";
 
 interface GroupedTollPassage {
   [key: string]: TollPassage[];
@@ -29,7 +30,7 @@ const TollPassages = () => {
     const fetchData = async () => {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:3333/vehicles/${regnumber}/toll-passages`
+        `${apiUrl()}/vehicles/${regnumber}/toll-passages`
       );
       const tollPassages = await response.json();
       setTollPassages(tollPassages);
@@ -62,7 +63,7 @@ const TollPassages = () => {
           <BackButton></BackButton>
           {Object.keys(groupedTollPassages).map((date) => {
             return (
-              <TollPassageContainer>
+              <TollPassageContainer key={date}>
                 <h2>{date}</h2>
                 <TollPassageCard
                   tollPassages={groupedTollPassages[date]}

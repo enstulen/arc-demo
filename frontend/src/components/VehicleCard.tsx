@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Vehicle } from "../types";
 import BaseCard from "./Card";
@@ -46,18 +46,28 @@ const Button = styled.button`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   flex: 4;
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin: 10px 0px 10px 0px;
 `;
 
-const Subtitle = styled.p`
-  color: #8c8c8c;
+const Header = styled.h1`
+  margin: 0px;
+  color: #15212d;
 `;
+
+const Subtitle = styled.h2`
+  color: #9aa4b0;
+  margin: 5px 0px 0px 0px;
+  font-size: 14px;
+`;
+
+const Text = styled.p``;
 
 const VehicleCard = (props: Props) => {
   const { vehicle } = props;
@@ -68,8 +78,9 @@ const VehicleCard = (props: Props) => {
       <VehicleCardImage src={vehicle.imageUrl} alt="vehicle" />
       <ContentContainer>
         <TextContainer>
-          <h1>{vehicle.name}</h1>
-          <Subtitle>{vehicle.description}</Subtitle>
+          <Header>{vehicle.name}</Header>
+          <Subtitle>{vehicle.regnumber}</Subtitle>
+          <Text>{vehicle.description}</Text>
         </TextContainer>
 
         <ButtonContainer>
