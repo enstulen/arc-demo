@@ -6,9 +6,8 @@
   "scripts": {
     "start:backend": "cd backend && yarn start",
     "start:frontend": "cd frontend && yarn start",
-    "deploy:frontend": "cd frontend && yarn build && cd ../backend && yarn deploy static",
-    "start": "concurrently \"yarn start:frontend\" \"yarn start:backend\" ",
-    "deploy": "cd frontend && yarn build && cd ../backend && arc deploy"
+    "deploy:frontend": "cd frontend && yarn build && cd ../backend && yarn deploy --static",
+    "start": "concurrently \"yarn start:frontend\" \"yarn start:backend\" "
   },
   "devDependencies": {
     "concurrently": "^7.1.0",

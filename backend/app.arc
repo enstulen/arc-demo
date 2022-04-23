@@ -32,5 +32,4 @@ tollPassages
 
 @static
 folder ../frontend/build
-fingerprint true
-
+prune true
