@@ -8,8 +8,8 @@ import { createJSONResponse } from "shared/response";
 
 type LambdaHandler = Handler<APIGatewayProxyEventV2, APIGatewayProxyResultV2>;
 
-export const handler: LambdaHandler = async (event, context) => {
-  const { regnumber } = event.pathParameters;
+export const handler: LambdaHandler = async (request, context) => {
+  const { regnumber } = request.pathParameters;
   const client = await tables();
   const tollPassagesClient = client.tollPassages;
 
