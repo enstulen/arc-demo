@@ -1,0 +1,7 @@
+{
+  "name": "get-vehicles",
+  "private": true,
+  "dependencies": {
+    "@architect/functions": "^5.0.4"
+  }
+}

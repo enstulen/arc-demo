@@ -24,3 +24,5 @@ yarn-error.log*
 
 sam.json
 sam.yaml
+
+preferences.arc

@@ -1,9 +1,6 @@
 @app
 arc-demo
 
-@create
-autocreate true
-
 @aws
 profile webstep
 region eu-west-1
@@ -14,6 +11,8 @@ runtime typescript
 architect/plugin-typescript
 architect/plugin-lambda-invoker
 
+@shared
+src ./src/shared
 
 @http
 get /

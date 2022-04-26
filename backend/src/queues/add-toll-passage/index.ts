@@ -1,8 +1,7 @@
-import { Handler, APIGatewayProxyEventV2 } from "aws-lambda";
-type LambdaHandler = Handler<APIGatewayProxyEventV2, void>;
 import { queues, tables } from "@architect/functions";
+import { TollPassageBody } from "shared/types";
 
-const handler: LambdaHandler = async (event) => {
+const handler = async (event: TollPassageBody) => {
   const client = await tables();
   const tollPassages = client.tollPassages;
 
