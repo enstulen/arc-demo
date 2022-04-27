@@ -1,14 +1,9 @@
-import {
-  Handler,
-  APIGatewayProxyEventV2,
-  APIGatewayProxyResultV2,
-} from "aws-lambda";
-type LambdaHandler = Handler<APIGatewayProxyEventV2, APIGatewayProxyResultV2>;
+import { APIGatewayProxyHandlerV2 } from "aws-lambda";
 import { queues } from "@architect/functions";
 import { TollPassageBody } from "shared/types";
 import { createEmptyResponse, createErrorResponse } from "shared/response";
 
-export const handler: LambdaHandler = async (request, context) => {
+export const handler: APIGatewayProxyHandlerV2 = async (request, context) => {
   try {
     const body = JSON.parse(request.body) as TollPassageBody;
 
